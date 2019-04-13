@@ -43,7 +43,7 @@ summary(regressor)
 ```
 ```
 Call:
-lm(formula = Profit ~ ., data = training_set)
+lm(Profit ~ ., training_set)
 
 Residuals:
    Min     1Q Median     3Q    Max 
@@ -64,8 +64,10 @@ Residual standard error: 9908 on 34 degrees of freedom
 Multiple R-squared:  0.9499,	Adjusted R-squared:  0.9425 
 F-statistic:   129 on 5 and 34 DF,  p-value: < 2.2e-16
 ```
+Based on the P-value in coefficient section, the R&D spend has highest impact on the profit so the profit is mainly govern by this independent variable. The problem can be changed to linear regression model because the other are not statistically significant.
+
 **Predicting the Test set results**
 
 ```
-y_pred = predict(regressor, newdata = test_set)
+y_pred = predict(regressor, test_set)
 ```
