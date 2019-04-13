@@ -8,6 +8,7 @@ For the purposes of this project, the following preprocessing steps have been ma
 Importing the dataset
 
 `dataset = read.csv('Data.csv')`
+
 ---
 
 Splitting the dataset into the Training set and Test set
