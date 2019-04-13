@@ -7,7 +7,7 @@ For the purposes of this project, the following preprocessing steps have been ma
 
 ---
 
-## Importing the dataset
+** Importing the dataset **
 
 `dataset = read.csv('50_Startups.csv')`
 
