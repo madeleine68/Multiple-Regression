@@ -5,22 +5,21 @@ In the linear regression model, the following results can be found:
 2. Predict future profits for new startups based on the same information.
 For the purposes of this project, the following preprocessing steps have been made to the dataset: 
 
+---
+
 Importing the dataset
 
 `dataset = read.csv('Data.csv')`
 
----
 
 Splitting the dataset into the Training set and Test set
 
-`install.packages('caTools') 
-
+```
+install.packages('caTools') 
 library(caTools)
-
 set.seed(123)  
-
 split = sample.split(dataset$DependentVariable, SplitRatio = 0.8)
-
 training_set = subset(dataset, split == TRUE)
+test_set = subset(dataset, split == FALSE)
 
-test_set = subset(dataset, split == FALSE)`
+```
