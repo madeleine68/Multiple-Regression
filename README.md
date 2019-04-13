@@ -38,11 +38,6 @@ regressor = lm(formula = Profit ~ .,
                data = training_set)              
  ```              
 
-**Predicting the Test set results**
-
-```
-y_pred = predict(regressor, newdata = test_set)
-```
 ```
 summary(regressor)
 ```
@@ -68,4 +63,9 @@ Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’
 Residual standard error: 9908 on 34 degrees of freedom
 Multiple R-squared:  0.9499,	Adjusted R-squared:  0.9425 
 F-statistic:   129 on 5 and 34 DF,  p-value: < 2.2e-16
+```
+**Predicting the Test set results**
+
+```
+y_pred = predict(regressor, newdata = test_set)
 ```
