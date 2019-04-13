@@ -7,11 +7,11 @@ For the purposes of this project, the following preprocessing steps have been ma
 
 ---
 
-##Importing the dataset
+## Importing the dataset
 
 `dataset = read.csv('50_Startups.csv')`
 
-##Encoding categorical data
+## Encoding categorical data
 
 ```
 
@@ -21,7 +21,7 @@ dataset$State = factor(dataset$State,
 
 ```
 
-##Splitting the dataset into the Training set and Test set
+## Splitting the dataset into the Training set and Test set
 
 ```
 install.packages('caTools') 
