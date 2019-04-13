@@ -32,3 +32,18 @@ training_set = subset(dataset, split == TRUE)
 test_set = subset(dataset, split == FALSE)
 
 ```
+
+**Fitting Multiple Linear Regression to the Training set**
+
+```
+regressor = lm(formula = Profit ~ .,
+               data = training_set)
+               
+ ```              
+
+**Predicting the Test set results**
+
+```
+y_pred = predict(regressor, newdata = test_set)
+
+```
