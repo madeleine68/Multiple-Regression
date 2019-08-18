@@ -2,7 +2,7 @@
 In this project, the investors can have an insight into the results. They will found out in which startup invest their money.
 In the linear regression model, the following results can be found:
 1. Which independent variable has the highest effect on the profit
-2. Predict future profits for new startups based on the same information.
+2. Predict future profits for new startups based on the same information (R&D spend, Adminstration, Marketing Spend ans State)
 For the purposes of this project, the following preprocessing steps have been made to the dataset: 
 
 ---
@@ -12,6 +12,7 @@ For the purposes of this project, the following preprocessing steps have been ma
 `dataset = read.csv('50_Startups.csv')`
 
 **Encoding categorical data**
+Since we have categorical variable in our data, I am going to encode tha States variables 
 
 ```
 
@@ -32,15 +33,16 @@ test_set = subset(dataset, split == FALSE)
 ```
 
 **Fitting Multiple Linear Regression to the Training set**
-
+I want to train the multiple linear regression on training set and later, will test the performance on the test set.
 ```
 regressor = lm(formula = Profit ~ .,
                data = training_set)              
  ```              
-
+In order to take a close look at the regressor, I use the summary to found out the strongest variable on the profit
 ```
 summary(regressor)
 ```
+Summary gives some information for each of the independent variables, first column shows the coefficients of multiple linear regression, then the standard error, t-value, p-value and lastly significance level. The two last columns are the most important as they gives the satatistical significane level of each independent variables. 
 ```
 Call:
 lm(Profit ~ ., training_set)
