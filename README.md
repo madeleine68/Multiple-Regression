@@ -66,10 +66,19 @@ Residual standard error: 9908 on 34 degrees of freedom
 Multiple R-squared:  0.9499,	Adjusted R-squared:  0.9425 
 F-statistic:   129 on 5 and 34 DF,  p-value: < 2.2e-16
 ```
-Based on the P-value in coefficient section, the R&D spend has highest impact on the profit so the profit is mainly govern by this independent variable. The problem can be changed to linear regression model because the other are not statistically significant.
+Based on the P-value in coefficient section, the R&D spend has highest impact on the profit so the profit is mainly govern by this independent variable. The problem can be changed into linear regression model because the other variables are not statistically significant.
+```
+regressor = lm(formula = Profit ~ R&D.Spend,
+               data = training_set)
+```
 
 **Predicting the Test set results**
-
 ```
 y_pred = predict(regressor, test_set)
+
+ 4         5         8        11        16        20        21 
+173981.09 172655.64 160250.02 135513.90 146059.36 114151.03 117081.62 
+       24        31        32 
+110671.31  98975.29  96867.03 
 ```
+The results from predication vector is not far from the amount of profits in test set, so the model did a pretty good job on this data set.
