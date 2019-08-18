@@ -12,6 +12,7 @@ For the purposes of this project, the following preprocessing steps have been ma
 `dataset = read.csv('50_Startups.csv')`
 
 **Encoding categorical data**
+
 Since we have categorical variable in our data, I am going to encode tha States variables 
 
 ```
